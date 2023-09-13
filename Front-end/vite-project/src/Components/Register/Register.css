@@ -1,0 +1,35 @@
+.error {
+  font-size: 12px;
+  color: rgb(173, 27, 27);
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+}
+
+.Register-Login-1 {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+blockquote {
+  display: block;
+  color: #5c5a5a;
+  font-weight: 600;
+  font-style: italic;
+}
+
+label {
+  font-weight: 600;
+}
+
+.form-group {
+  position: relative;
+  padding-bottom: 10px;
+}
+
+h3 {
+  padding: 0;
+  margin: 0;
+}

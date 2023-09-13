@@ -1,0 +1,147 @@
+.wrapper-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 1000;
+  height: 80px;
+}
+
+.wrapper-header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-navbar ul {
+  display: flex;
+  align-self: center;
+  list-style: none;
+  gap: 40px;
+  cursor: pointer;
+}
+
+.header-navbar ul li {
+  font-weight: 600;
+  color: #7b7777;
+}
+
+.greeting {}
+
+.greeting span {
+  font-weight: 600;
+  color: #726d6d;
+  margin-left: 10px;
+}
+
+.header-search {
+  display: flex;
+  align-items: center;
+}
+
+.header-search input {
+  border-radius: 10px;
+  outline: none;
+  border: none;
+}
+
+.wrapper-header-right a {
+  text-decoration: none;
+  color: black;
+}
+
+.wrapper-header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.icon-cart {
+  font-size: 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.count {
+  border: 1px solid rgb(152, 0, 0);
+  padding: 0px 9px;
+  border-radius: 50%;
+  border: none;
+  background-color: red;
+  color: white;
+  position: relative;
+  bottom: 15px;
+  right: 7px;
+}
+
+.icon-cart button {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.settings {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Các phần tử bổ sung cho việc hiển thị bảng cài đặt */
+.settings-dropdown {
+  position: absolute;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 10px rgba(102, 99, 99, 0.9);
+  border-radius: 4px;
+  min-width: 150px;
+  top: 40px;
+  right: -50px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  /* right: 30px; */
+}
+
+.settings-dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /* left: 40px; */
+}
+
+.settings-dropdown li {
+  display: block;
+  padding: 4px 8px;
+  font-weight: 600;
+  transition: 0.2s linear;
+}
+
+.settings-dropdown li:hover {
+  background-color: #d6d1d1;
+}
+
+.settings-dropdown li:hover a {
+  color: #fff;
+}
+
+.settings-dropdown ul li a {
+  color: #FF6612;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/* Ẩn bảng cài đặt mặc định */
+.settings-dropdown {
+  display: none;
+}
+
+/* Hiển thị bảng cài đặt khi người dùng di chuột vào biểu tượng cài đặt */
+.settings:hover .settings-dropdown {
+  display: block;
+}

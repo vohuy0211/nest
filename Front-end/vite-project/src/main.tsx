@@ -6,9 +6,9 @@ import App from './App.tsx';
 import store from './Components/store/reducer/store';
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </React.StrictMode>
+
+  <Provider store={store}>
+    <App />
+  </Provider>
+
 );

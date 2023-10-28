@@ -16,6 +16,8 @@ export class HistoryService {
     private productRepo: Repository<Product>,
   ) { }
   async handlePostHistory(data: HistoryDTO) {
+    console.log(data);
+
     const history = {
       totalPrice: data.totalPrice,
       orderDate: data.orderDate,
@@ -27,7 +29,7 @@ export class HistoryService {
       orderId: data.orderId,
       productId: data.productId
     }
-
+    console.log(history);
     try {
       const savedHistory = await this.HistoryRepo.save(history as any);
       // Lấy thông tin sách từ lịch sử
@@ -102,6 +104,20 @@ export class HistoryService {
       return historyItem;
     } catch (error) {
       throw new Error('Lỗi khi truy vấn dữ liệu lịch sử');
+    }
+  }
+
+  async deleteHistoryById(id: number) {
+    try {
+      const deletedHistory = await this.HistoryRepo.delete(id);
+      if (deletedHistory.affected === 1) {
+        return { message: 'History deleted successfully' };
+      } else {
+        throw new Error('Không tìm thấy lịch sử để xóa');
+      }
+    } catch (error) {
+      console.log(error);
+      throw new Error('Lỗi khi xóa lịch sử');
     }
   }
 }

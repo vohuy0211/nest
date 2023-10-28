@@ -55,7 +55,14 @@ export class HistoryController {
     }
   }
 
-  // @Delete('id')
+  @Delete(':id')
+  async DeleteById(@Param('id') id: number) {
+    try {
+      return await this.historyService.deleteHistoryById(id)
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
 
 }

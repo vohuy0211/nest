@@ -79,3 +79,13 @@ tbody td {
 .wrapper-cart-product {
   margin-top: 100px;
 }
+
+@media screen and (max-width: 768px) {
+  /* CSS dành cho màn hình có kích thước nhỏ hơn hoặc bằng 768px */
+  /* Ví dụ: thay đổi font-size, padding, margin, v.v. */
+}
+
+@media screen and (max-width: 576px) {
+  /* CSS dành cho màn hình có kích thước nhỏ hơn hoặc bằng 576px */
+  /* Ví dụ: thay đổi cấu trúc layout, ẩn hoặc hiển thị phần tử, v.v. */
+}

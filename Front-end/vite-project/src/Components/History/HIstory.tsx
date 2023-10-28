@@ -20,7 +20,7 @@ const HIstory = () => {
       // console.log("con cac", responseOrder.id);
 
       const response: any = await CartAPI.getHistory(responseOrder.id);
-      console.log("dmjhsd,kfhsdk", response);
+      // console.log("dmjhsd,kfhsdk", response);
       setOrderData(response);
     };
     fetchData();
@@ -31,7 +31,6 @@ const HIstory = () => {
     <div className="history-wrapper">
       <Header />
       <h2>Lịch sử mua hàng</h2>
-
       {orderData?.map((item) => (
         <div className="order-item">
           <div className="order-header">

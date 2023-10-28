@@ -49,6 +49,10 @@ const CardProduct = () => {
     );
   };
 
+  const totalPrice = getTotalPrice()
+  // console.log("total ==>", totalPrice);
+
+
   const handleIncreaseQuantity = async (productId: number, currentQuantity: number) => {
     const newQuantity = currentQuantity + 1;
     await updateQuantityOnServer(productId, newQuantity);
@@ -142,10 +146,15 @@ const CardProduct = () => {
     setDataOrder([]);
   };
 
+  const closeModalPayPal = () => {
+    setPaypal(false)
+  }
+
+
 
   return (
     <div className="wrapper-cart-product">
-      <ModalPayPal />
+      {paypal && <ModalPayPal totalPrice={totalPrice} closeModalPayPal={closeModalPayPal} />}
       <ToastContainer
         position="top-right"
         autoClose={5000}
@@ -217,7 +226,7 @@ const CardProduct = () => {
           <button onClick={() => handleHistory(userObject.id)}>
             CheckOut
           </button>
-          <Link to='/PayPal'>PayPal</Link>
+          <button onClick={() => setPaypal(true)}>Pay with PayPal</button>
         </div>
         <div className="wrapper-footer-end">
           <div className="wrapper-footer-end-right">

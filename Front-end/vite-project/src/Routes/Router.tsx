@@ -7,7 +7,6 @@ import Favorite from '../Components/Favorite/Favorite';
 import History from '../Components/History/HIstory';
 import HomePage from '../Components/HomePage/HomePage';
 import Login from '../Components/Login/Login';
-import Paypal from '../Components/Paypal/Paypal';
 import Profile from '../Components/Profile/Profile';
 import Register from '../Components/Register/Register';
 import RequireLogin from '../Components/RequireAuth/RequireAuth';
@@ -33,7 +32,7 @@ const Router = () => {
           <Route path='/History' element={<History />} />
           <Route path='/Profile' element={<Profile />} />
           <Route path='/Favorite' element={<Favorite />} />
-          <Route path='/PayPal' element={<Paypal />} />
+          {/* <Route path='/PayPal' element={<Paypal />} /> */}
         </Route>
 
         <Route path='/Login' element={<LoginLayout><Login /></LoginLayout>} />

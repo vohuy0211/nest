@@ -72,7 +72,7 @@ export class ProductService {
     }
   }
 
-  async findByName(name: string,) {
+  async findByName(name: string) {
     try {
       return await this.ProductRepo.find({
         where: {
